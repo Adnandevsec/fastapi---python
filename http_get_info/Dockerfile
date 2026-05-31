@@ -14,7 +14,7 @@ CMD ["uvicorn",  "main:app","--host","0.0.0.0","--port","8001"]
 # docker build -t http_get:v1 .
 # docker images
 
-#---- run the docker 
+#---- run the docker    
 #docker run -p 8000:8000 -d  http_get:v1
 
 #docker run http_get:v1 -p 8000:8000
