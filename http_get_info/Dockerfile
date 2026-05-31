@@ -28,3 +28,10 @@ CMD ["uvicorn",  "main:app","--host","0.0.0.0","--port","8001"]
 # -- pull
 #docker pull adnandevsec/http_get_info:v1
 #docker run -p 8001:8000 adnandevsec/http_get_info:v1
+
+#docker stop (container id)
+#docker start (container id)
+#docker rm (container id)
+#docker ps
+#docker ps -a
+
