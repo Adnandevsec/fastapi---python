@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/read")
 def read_from_file():
-    file = open(r"C:\Users\HP\Desktop\python projects\temp.txt", "r")
+    file = open(r"temp.txt", "r")
     content = file.read()
     file.close()
     return(content)
@@ -14,4 +14,4 @@ def read_from_file():
 
 if __name__=="__main__":
     print("welcome..")
-    uvicorn.run(app,host="127.0.0.1", port=8000)
+    uvicorn.run(app,host="127.0.0.1", port=8002)
