@@ -23,6 +23,7 @@ CMD ["uvicorn",  "main:app","--host","0.0.0.0","--port","8002"]
 
 # -- push 
 # docker login
+#docker tag <local-image> <dockerhub-username>/<repository>:<tag>
 # docker tag http_get:v1 adnandevsec/http_get:v1 
 # docker push adnandevsec/http_get:v1
 
