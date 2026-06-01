@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.get("/env")
 def read_env():
-    v = os.getenv("app_pass")
+    v = os.getenv("user_name")
     print(v)
     return{v}
 
