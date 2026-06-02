@@ -37,3 +37,6 @@ CMD ["uvicorn",  "main:app","--host","0.0.0.0","--port","8002"]
 #docker rm (container id)
 #docker ps
 #docker ps -a
+
+#docker inspect <container id>
+#docker inspect <image name>
