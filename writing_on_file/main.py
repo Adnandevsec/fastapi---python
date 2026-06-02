@@ -1,15 +1,19 @@
 from fastapi import FastAPI
 import uvicorn
+from pydantic import BaseModel
 
 
 app = FastAPI()
 
+class Message(BaseModel):
+    name : str
+
 @app.post("/write")
-def write_on_file():
-    file = open(r"C:\Users\HP\Desktop\python projects\temp.txt", "w")
-    file.write("Hello world")
+def write_on_file(mes : Message):
+    file = open(r"file.txt", "a")
+    file.write(mes.name+"\n")
     file.close()
-    return("content")
+    return{"message": "Written successfully"}
 
 
 if __name__=="__main__":
