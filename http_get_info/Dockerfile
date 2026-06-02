@@ -1,6 +1,6 @@
 FROM python:3-slim
 
-EXPOSE 8000
+EXPOSE 8001
 
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
@@ -15,8 +15,8 @@ CMD ["uvicorn",  "main:app","--host","0.0.0.0","--port","8001"]
 # docker images
 
 #---- run the docker    
-#docker run -p 8000:8000 -d  http_get:v1
-
+#docker run -d -p 8000:8000 http_get:v1     8000: -> this port for the public
+#                                           :8000 -> this port for internal use
 #docker run http_get:v1 -p 8000:8000
 
 # -- push 
