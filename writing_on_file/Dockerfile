@@ -1,4 +1,8 @@
-FROM python:3.11-alpine
+FROM python:3.13.13-alpine
+
+RUN pip install --upgrade pip
+
+RUN apk update && apk upgrade
 
 EXPOSE 8000
 
