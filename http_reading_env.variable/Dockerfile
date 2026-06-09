@@ -1,4 +1,4 @@
-FROM python:3-slim
+FROM python:alpine:3.23
 
 EXPOSE 8000
 
