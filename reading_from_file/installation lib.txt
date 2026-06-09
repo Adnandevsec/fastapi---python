@@ -1,5 +1,0 @@
-pip install fastapi uvicorn
-py -m pip install fastapi uvicorn
-
-pip show fastapi
-py -m pip show fastapi
