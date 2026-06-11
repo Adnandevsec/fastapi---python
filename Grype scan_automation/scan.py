@@ -24,3 +24,11 @@ for match in data["matches"]:
 
 print(rows[:5])
 
+df = pd.DataFrame(rows)
+
+df.to_excel(
+    "grype_report.xlsx",
+    index=False
+)
+
+print("Excel report generated successfully")
