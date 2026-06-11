@@ -1,6 +1,26 @@
 import json
+import pandas as pd
 
 with open("results.json", "r", encoding="utf-8") as f:
   data = json.load(f)
 
-print(data.keys())
+
+rows = []
+
+for match in data["matches"]:
+
+    package = match["artifact"]["name"]
+    version = match["artifact"]["version"]
+
+    cve = match["vulnerability"]["id"]
+    severity = match["vulnerability"]["severity"]
+
+    rows.append({
+        "Package": package,
+        "Version": version,
+        "CVE": cve,
+        "Severity": severity
+    })
+
+print(rows[:5])
+
