@@ -1,15 +1,22 @@
-FROM python:3.12-alpine
+FROM python:3.12-alpine  
+#Start from an existing Docker image that contains:
+#- Linux (Alpine)
+#- Python 3.12
 
-WORKDIR /app
+WORKDIR /app    
+# Creates /app directory and makes it the current working directory  ... cd /app for example
 
 COPY requirements.txt .
+#copy requirements file from my device to the container
 
 RUN pip install --no-cache-dir -r requirements.txt
+# here will read the libraries from requirements.txt file then install them.
 
 COPY . .
+# here will copy all the project files to inside the container... for example ...(scan.py + results.json + requirements.txt)
 
 CMD ["python", "scan.py"]
-
+#when we run (docker run image_name) , it will execute (python scan.py)
 
 
 # -- create a docker ----
